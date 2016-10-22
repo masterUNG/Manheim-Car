@@ -11,9 +11,27 @@
     tools:context="appewtc.masterung.manheimcar.SignUpActivity">
 
     <TextView
-        android:text="TextView"
+        android:text="@string/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button3"
+        android:layout_below="@+id/textView"
+        android:layout_margin="15dp"
+        android:padding="15dp"></LinearLayout>
 </RelativeLayout>
