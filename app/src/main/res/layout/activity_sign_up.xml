@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
@@ -8,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="appewtc.masterung.manheimcar.SignUpActivity">
+    tools:context="appewtc.masterung.manheimcar.SignUpActivity"
+    android:background="@drawable/bg27">
 
     <TextView
         android:text="@string/signUp"
@@ -17,7 +19,9 @@
         android:id="@+id/textView"
         android:textSize="30sp"
         android:textStyle="normal|bold"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/aText"
+        android:textColorHint="@color/aText" />
 
     <Button
         android:text="@string/signUp"
@@ -33,5 +37,50 @@
         android:layout_above="@+id/button3"
         android:layout_below="@+id/textView"
         android:layout_margin="15dp"
-        android:padding="15dp"></LinearLayout>
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/question_man"
+            android:id="@+id/imageView"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:hint="Name :"
+                android:textColor="@color/aText"
+                android:textColorHint="@color/aText" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:hint="User :"
+                android:textColor="@color/aText"
+                android:textColorHint="@color/aText" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:hint="Password :"
+                android:textColor="@color/aText"
+                android:textColorHint="@color/aText" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
