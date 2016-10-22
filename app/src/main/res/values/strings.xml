@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Manheim Car</string>
+    <string name="singIn">Sing In</string>
+    <string name="signUp">สมัครสมาชิก</string>
 </resources>
