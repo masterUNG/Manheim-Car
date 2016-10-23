@@ -40,7 +40,6 @@ public class SignUpActivity extends AppCompatActivity {
     private boolean aBoolean = true;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,7 +158,6 @@ public class SignUpActivity extends AppCompatActivity {
                 result = "Cannot Upload";
                 Toast.makeText(context, result, Toast.LENGTH_SHORT).show();
             }
-
 
 
         }   // onPost
