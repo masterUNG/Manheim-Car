@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     //Explicit
     private Button singInButton, singUpButton;
     private EditText userEditText, passwordEditText;
+    private String userString, passwordString;
 
 
     @Override
@@ -31,6 +32,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SignUpActivity.class));
             }
+        });
+
+        //singIn Controller
+        singInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Get Value
+                userString = userEditText.getText().toString().trim();
+                passwordString = passwordEditText.getText().toString().trim();
+
+                //Check Space
+                if (userString.equals("") || passwordString.equals("")) {
+                    MyAlert myAlert = new MyAlert(MainActivity.this,
+                            R.drawable.nobita48, "Have Space",
+                            "Please Fill All Every Blank");
+                    myAlert.myDialog();
+                }
+
+
+            }   // onClick
         });
 
 
