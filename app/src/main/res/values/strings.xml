@@ -2,4 +2,5 @@
     <string name="app_name">Manheim Car</string>
     <string name="singIn">Sing In</string>
     <string name="signUp">สมัครสมาชิก</string>
+    <string name="title_activity_detail">Map</string>
 </resources>
