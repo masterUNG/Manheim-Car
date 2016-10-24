@@ -1,8 +1,11 @@
 package appewtc.masterung.manheimcar;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class ListService extends AppCompatActivity {
@@ -45,6 +48,16 @@ public class ListService extends AppCompatActivity {
         OfficerAdapter officerAdapter = new OfficerAdapter(ListService.this,
                 nameStrings, latStrings, lngStrings, imageStrings);
         listView.setAdapter(officerAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent intent = new Intent(ListService.this, DetailActivity.class);
+                startActivity(intent);
+
+            }   // onItemClick
+        });
 
 
     }   // Main Method
