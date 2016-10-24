@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -148,6 +149,20 @@ public class MainActivity extends AppCompatActivity {
 
                     MyAlert myAlert = new MyAlert(context, R.drawable.kon48,
                             titleString, messageString);
+                    myAlert.myDialog();
+
+                } else if (passwordString.equals(truePasswordString)) {
+
+                    //Password True
+                    Toast.makeText(context, "Welcome", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, ListService.class);
+                    startActivity(intent);
+                    finish();
+
+                } else {
+                    //Password False
+                    MyAlert myAlert = new MyAlert(context, R.drawable.doremon48,
+                            "Password False", "Please Try Again Password False");
                     myAlert.myDialog();
 
                 }
