@@ -1,14 +1,13 @@
 package appewtc.masterung.manheimcar;
 
 import android.content.Context;
-import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -70,8 +69,33 @@ public class ListService extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Intent intent = new Intent(ListService.this, DetailActivity.class);
-                startActivity(intent);
+                //Check Lat,Lng ==> double
+                boolean bolLat = true;
+                boolean bolLng = true;
+
+                try {
+
+                    double douLat = Double.parseDouble(latStrings[i]);
+
+                } catch (Exception e) {
+                    Log.d("30octV2", "e ==> " + e.toString());
+                    bolLat = false;
+                }
+
+                try {
+
+                    double douLng = Double.parseDouble(lngStrings[i]);
+
+                } catch (Exception e) {
+                    Log.d("30octV2", "e ==> " + e.toString());
+                    bolLng = false;
+                }
+
+                Log.d("30octV2", "bolLat ==> " + bolLat);
+                Log.d("30octV2", "bolLng ==> " + bolLng);
+
+
+
 
             }   // onItemClick
         });
