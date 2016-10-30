@@ -1,6 +1,7 @@
 package appewtc.masterung.manheimcar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -93,6 +94,19 @@ public class ListService extends AppCompatActivity {
 
                 Log.d("30octV2", "bolLat ==> " + bolLat);
                 Log.d("30octV2", "bolLng ==> " + bolLng);
+
+                if (bolLat && bolLng) {
+
+                    Intent intent = new Intent(ListService.this, DetailActivity.class);
+                    startActivity(intent);
+
+                } else {
+
+                    MyAlert myAlert = new MyAlert(ListService.this,
+                            R.drawable.bird48, "NO Location",
+                            "No Lat/Lng on This Person");
+                    myAlert.myDialog();
+                }
 
 
 
