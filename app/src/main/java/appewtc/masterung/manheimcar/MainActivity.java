@@ -80,8 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
         //Explicit
         private Context context;
-        private String titleString, messageString, truePasswordString;
-        private String[] nameStrings, imageStrings, latStrings, lngStrings;
+        private String titleString, messageString,
+                truePasswordString, idString;
+        private String[] nameStrings, imageStrings,
+                latStrings, lngStrings;
         private boolean aBoolean = true;
 
 
@@ -134,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
                         aBoolean = false;
                         truePasswordString = jsonObject.getString("Password");
+                        idString = jsonObject.getString("id");
 
                     }   // if
 
@@ -166,10 +169,11 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, ListService.class);
 
                     //Put Data to ListService
-                    intent.putExtra("Name", nameStrings);
-                    intent.putExtra("Image", imageStrings);
-                    intent.putExtra("Lat", latStrings);
-                    intent.putExtra("Lng", lngStrings);
+                    intent.putExtra("id", idString);    // for Where Edit Location
+                    intent.putExtra("Name", nameStrings);   // for Create ListView
+                    intent.putExtra("Image", imageStrings); // for Create ListView
+                    intent.putExtra("Lat", latStrings);     // for Create ListView
+                    intent.putExtra("Lng", lngStrings);     // for Create ListView
 
                     startActivity(intent);
                     finish();
