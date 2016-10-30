@@ -98,6 +98,11 @@ public class ListService extends AppCompatActivity {
                 if (bolLat && bolLng) {
 
                     Intent intent = new Intent(ListService.this, DetailActivity.class);
+
+                    intent.putExtra("Name", nameStrings[i]);
+                    intent.putExtra("Lat", latStrings[i]);
+                    intent.putExtra("Lng", lngStrings[i]);
+
                     startActivity(intent);
 
                 } else {
